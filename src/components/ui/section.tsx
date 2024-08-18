@@ -14,9 +14,9 @@ export function Section(
 ) {
   return (
     <section
-      className={cn('w-full py-32 border-t border-section flex items-center justify-center px-6', className, {
-        'bg-gradient-r dark:bg-gradient-r-dark': bgDirection === 'r',
-        'bg-gradient-l dark:bg-gradient-l-dark': bgDirection === 'l',
+      className={cn('w-full py-28 border-t border-section flex items-center justify-center px-6', className, {
+        'bg-background dark:bg-gradient-r-dark': bgDirection === 'r',
+        'bg-white dark:bg-gradient-l-dark': bgDirection === 'l',
       })}
       {...props}
     >

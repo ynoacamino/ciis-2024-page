@@ -6,7 +6,7 @@ export default function ProgressBarProvider({ children }: { children: React.Reac
   return (
     <>
       <AppProgressBar
-        color="#ffa300"
+        color="#83080D"
         height="3px"
         options={{ showSpinner: false }}
       />

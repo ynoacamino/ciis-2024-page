@@ -20,8 +20,8 @@ export const NAVLINKS = [
     ],
   },
   {
-    href: '/about',
-    text: 'Conócenos',
+    href: '/inscripciones',
+    text: 'Inscripciones',
     links: [
       {
         name: '¿Qué es?',
@@ -38,8 +38,8 @@ export const NAVLINKS = [
     ],
   },
   {
-    href: '/events',
-    text: 'Eventos',
+    href: '/programa',
+    text: 'Programa',
     links: [
       {
         name: 'Eventos próximos',
@@ -56,16 +56,26 @@ export const NAVLINKS = [
     ],
   },
   {
+    href: '/feria-de-proyectos',
+    text: 'Feria de proyectos',
+    links: null,
+  },
+  {
     href: '/gallery',
     text: 'Galería',
     links: null,
   },
   {
-    href: '/teams',
-    text: 'Equipo',
+    href: '/acerca-de',
+    text: 'Acerca de',
     links: TEAM.map(({ position }) => ({
-      name: position.es,
-      path: `/teams/#${position.en}`,
+      name: position,
+      path: `/teams/#${position}`,
     })),
+  },
+  {
+    href: '/nosotros',
+    text: 'Nosotros',
+    links: null,
   },
 ];

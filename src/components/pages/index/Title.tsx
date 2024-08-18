@@ -5,9 +5,16 @@ import {
   useEffect, useMemo, useState,
 } from 'react';
 
+import { IBM_Plex_Mono } from 'next/font/google';
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['700'],
+});
+
 export default function Title() {
-  const FIRST_WORD = 'COMPUTER';
-  const SECOND_WORD = 'SOCIETY';
+  const FIRST_WORD = 'CIIS';
+  const SECOND_WORD = '2024';
   const MILISECONDS = 80;
   const TIMES = 10;
 
@@ -46,15 +53,15 @@ export default function Title() {
   }, [index1, index2, firstWord, secondWord, words1, words2]);
 
   return (
-    <div className="flex flex-col w-full my-40 max-w-4xl gap-4 px-6">
-      <h1 className="text-primary-title font-extrabold flex flex-col text-6xl sm:text-8xl md:text-9xl leading-[0.9] overflow-hidden">
-        <span className="text-web-gray text-6xl sm:text-7xl md:text-8xl">IEEE</span>
+    <div className={cn('', 'flex flex-col w-full mb-32 mt-28 max-w-4xl gap-4 px-6')}>
+      <h1 className={cn(ibmPlexMono.className, 'text-primary-title font-extrabold flex flex-col text-9xl sm:text-9xl md:text-[10rem] leading-[0.9] overflow-hidden')}>
+        <span className="text-web-gray text-4xl sm:text-5xl md:text-6xl">IEEE</span>
         <span className="flex">
           {
             firstWord.split('').map((letter, i) => (
               <span
                 key={crypto.randomUUID()}
-                className={cn('w-16 sm:w-24 md:w-28 text-center', {
+                className={cn('', {
                   'text-web-gray-200': letter !== FIRST_WORD[i],
                 })}
               >
@@ -69,7 +76,7 @@ export default function Title() {
             secondWord.split('').map((letter, i) => (
               <span
                 key={crypto.randomUUID()}
-                className={cn('w-16 sm:w-20 md:w-24 text-center', {
+                className={cn('', {
                   'text-web-gray-200': letter !== SECOND_WORD[i],
                 })}
               >
@@ -80,8 +87,8 @@ export default function Title() {
           <span className="sr-only">{SECOND_WORD}</span>
         </span>
       </h1>
-      <h2 className="text-3xl font-semibold">
-        Universidad Nacional de San Agustín de Arequipa
+      <h2 className="text-4xl md:text-5xl font-semibold uppercase">
+        IV Congreso Internacional de Ingenieria de Sistemas
       </h2>
     </div>
   );
