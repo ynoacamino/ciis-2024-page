@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -24,13 +23,12 @@ export default function Avatars({ list }: { list: {
               href={`/teams/#${position}`}
               className="flex gap-4 w-full items-center hover:bg-accent transition-colors p-4 rounded-lg duration-150"
             >
-              <Image
+              <img
                 src={avatar}
                 alt={position}
                 width={150}
                 height={150}
                 className="rounded-full"
-                priority
               />
               <span className="flex flex-col">
                 <h1 className="font-bold text-2xl text-primary-title">{`${name.split(' ')[0]} ${name.split(' ')[1]}`}</h1>

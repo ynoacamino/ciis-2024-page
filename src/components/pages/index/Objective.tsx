@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Section } from '@/components/ui/section';
 
 export default function Objective() {
@@ -11,7 +10,7 @@ export default function Objective() {
             El objetivo principal es fomentar el intercambio de experiencias en los distintos ámbitos profesionales que exige la aplicación, desarrollo de software y el uso de tecnologías de información emergentes a través del IV Congreso Internacional de la Escuela Profesional de Ingeniería de Sistemas – CIIS 2024.
           </p>
         </div>
-        <Image
+        <img
           className="w-full aspect-square rounded-lg object-cover max-w-sm"
           alt=""
           src="/images/about-us/objetivo.png"
