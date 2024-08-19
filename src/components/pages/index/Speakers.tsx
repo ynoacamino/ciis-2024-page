@@ -90,7 +90,7 @@ export default function Speakers() {
               <p className="text-primary">
                 {expositor.description}
               </p>
-              <div className="flex gap-2 text-primary w-full justify-start">
+              <div className="flex gap-2 text-white w-full justify-start">
                 <Link href="/" className="bg-zinc-500 rounded-full p-1 w-10 h-10 flex items-center justify-center">
                   <span className="sr-only">Twitter</span>
                   <TwitterIcon className="w-6 h-6" />

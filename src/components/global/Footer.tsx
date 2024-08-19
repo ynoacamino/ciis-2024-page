@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-section pt-10 flex justify-center items-start">
       <div className="w-full max-w-7xl mb-10 px-6 flex flex-col gap-16">
-        <div className="w-full">
+        <div className="w-11/12 flex items-center justify-center mx-auto">
           <ImageCarousel />
         </div>
         <div className="w-full grid md:grid-cols-3 gap-10">

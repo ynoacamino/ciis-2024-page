@@ -15,14 +15,14 @@ export default function ImageCarousel() {
     slidesToScroll: 1,
   };
   return (
-    <Slider {...settings} className="">
+    <Slider {...settings} className="w-full">
       {
         Array.from({ length: 5 }).map((_, index) => (
           <img
             key={index}
             src={`/carousel/${index + 1}.jpeg`}
             alt="Ponente"
-            className="w-full aspect-[24/9] object-cover rounded-lg"
+            className="w-full aspect-video md:aspect-[24/9] object-cover rounded-lg"
           />
         ))
       }

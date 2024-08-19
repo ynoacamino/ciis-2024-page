@@ -31,28 +31,28 @@ export default function Clock() {
   }, [seconds, minutes, hours, days]);
 
   return (
-    <Section bgDirection="l" className="w-full max-w-6xl flex flex-col justify-center items-center py-10 gap-y-10">
+    <Section bgDirection="l" className="w-full flex flex-col justify-center items-center py-10 gap-y-10">
       <h1 className="text-5xl font-bold text-primary-title text-center">
         Cuenta regresiva para el evento
       </h1>
       <div className="uppercase text-primary flex gap-2 text-sm md:text-xl">
         <div className="flex flex-col gap-4 items-center">
-          <span className="text-6xl md:text-8xl font-semibold">{days}</span>
+          <span className="text-6xl md:text-8xl font-semibold">{days.toString().padStart(2, '0')}</span>
           <span>Dias</span>
         </div>
         <span className="text-6xl md:text-8xl">:</span>
         <div className="flex flex-col gap-4 items-center">
-          <span className="text-6xl md:text-8xl font-semibold">{hours}</span>
+          <span className="text-6xl md:text-8xl font-semibold">{hours.toString().padStart(2, '0')}</span>
           <span>Horas</span>
         </div>
         <span className="text-6xl md:text-8xl">:</span>
         <div className="flex flex-col gap-4 items-center">
-          <span className="text-6xl md:text-8xl font-semibold">{minutes}</span>
+          <span className="text-6xl md:text-8xl font-semibold">{minutes.toString().padStart(2, '0')}</span>
           <span>Minutos</span>
         </div>
         <span className="text-6xl md:text-8xl">:</span>
         <div className="flex flex-col gap-4 items-center">
-          <span className="text-6xl md:text-8xl font-semibold">{seconds}</span>
+          <span className="text-6xl md:text-8xl font-semibold">{seconds.toString().padStart(2, '0')}</span>
           <span>Segundos</span>
         </div>
       </div>
